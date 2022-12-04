@@ -1,0 +1,1 @@
+Rede social fictícia para compartilhamento de receitas. Aplicando conhecimentos de ASP.NET MVC e MongoDB.
