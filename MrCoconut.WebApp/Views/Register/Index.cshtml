@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<body class="bodyCadastro">
+    <div class="quadroCadastro">
+        <div class="formCadastro">
+            <h1>Cadastre-se</h1>
+            <form asp-action="CreateUser">
+                <div class="campoInput">
+                    <legend>Nome</legend>
+                    <input type="text" name="name" title="Digite seu nome completo" placeholder="Digite seu nome completo" minlength="5" autocomplete="" autofocus
+                           required>
+                </div>
+
+                <div class="campoInput">
+                    <legend>Email</legend>
+                    <input type="email" name="email" minlength="10" placeholder="ex: abcdef@gmail.com" title="Digite seu email (ex: abcdef@example.com)" value=""
+                           autocomplete="" required>
+                </div>
+
+                <div class="campoInput">
+                    <legend>Senha</legend>
+                    <input type="password" name="password" minlength="8" placeholder="Utilize caracteres especiais (ex: @@,#)" pattern="(@@,,# {1,2,3,4,5,6,7,8,9,0})"
+                           title="Utilize caracteres especiais (ex: @@,,#)" required>
+                </div>
+
+                <div class="campoInput">
+                    <legend>Confirme sua senha</legend>
+                    <input type="password" name="confirm" minlength="8" placeholder="Confirme sua senha" pattern="(@@,*,# {1,2,3,4,5,6,7,8,9,0})"
+                           title="Confirme a senha anterior" required>
+                </div>
+                <button class="botaoConfirmar" type="submit" >Cadastrar</button>
+            </form>
+        </div>
+        <hr>
+        <div class="textoBoasVindas">
+            <div class="quadroTextos">
+                <h1>Bem vindo ao Mr.Coconut</h1>
+                <p>Compartilhe ideias criativas para o incrível mundo da culinária!</p>
+            </div>
+        </div>
+    </div>
+</body>

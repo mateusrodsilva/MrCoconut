@@ -1,18 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.bodyLogin {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/backgroundCoconut.png);
 }
 
-body {
-  margin-bottom: 60px;
+.logo {
+    font-family: 'Pacifico', cursive;
 }
+
+.quadroLogin {
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    width: 350px;
+    height: 399px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7bb75;
+    border-radius: 0.9rem;
+}
+
+    .quadroLogin h1 {
+        text-align: center;
+    }
+
+    .quadroLogin form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+
+.botaoConfirmar {
+    width: 268px;
+    height: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: medium;
+    background-color: #FB993F;
+    border: 1px solid;
+    margin-bottom: 0.5rem;
+}
+
+.quadroLogin p a {
+    font-weight: bold;
+    text-decoration: none;
+    color: orangered
+}
+
+/*Tela de Cadastro*/
+.bodyCadastro {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/backgroundCoconut.png);
+}
+
+.quadroCadastro {
+    width: 700px;
+    height: 600px;
+    display: flex;
+    border-radius: 0.9rem;
+    background-color: #f7bb75;
+    align-items: center;
+}
+
+.formCadastro {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+    .formCadastro h1 {
+        font-family: 'Pacifico', cursive;
+        font-size: 2rem;
+    }
+
+    .formCadastro form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+.campoInput {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    .campoInput legend {
+        font-size: 1rem;
+    }
+
+    .campoInput input {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.8rem;
+        background-color: #f1e9bb;
+        border: 0.5px solid;
+        width: 268px;
+        height: 38px;
+        padding: 0.2rem;
+        margin: 0.5rem;
+    }
+
+.quadroCadastro hr {
+    height: 500px;
+    border: black 1px solid;
+}
+
+.textoBoasVindas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.quadroTextos {
+    width: 180px;
+}
+
+    .quadroTextos h1 {
+        font-family: 'Pacifico', cursive;
+    }
+
+    .quadroTextos p {
+        font-family: 'Montserrat', sans-serif;
+    }
