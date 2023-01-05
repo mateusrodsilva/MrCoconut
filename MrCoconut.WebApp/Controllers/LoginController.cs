@@ -10,7 +10,6 @@ namespace MrCoconut.WebApp.Controllers
 {
     public class LoginController : Controller
     {
-        //private readonly IHttpContextAccessor contextAccessor;
         private IUserRepository userRepository;
 
         public LoginController(IUserRepository userRepository)
@@ -20,7 +19,14 @@ namespace MrCoconut.WebApp.Controllers
 
         public IActionResult Login(IFormCollection form)
         {
-            var loged = userRepository.Login(form["email"], form["password"]); 
+            var loged = userRepository.Login(form["email"], form["password"]);
+
+            if (loged.Result.Erros.Any())
+            {
+                ViewData["Message"] = $"Wrong data, {loged.Result.Erros.FirstOrDefault()}";
+                return View("Index");
+            }
+
             if (loged.Result != null)
             {
                 ViewBag.LoggedIn = loged.Result.Id;
@@ -31,41 +37,12 @@ namespace MrCoconut.WebApp.Controllers
                 return LocalRedirect("~/Login");
             }
 
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/Feed/Index");
         }
 
         public IActionResult Index()
         {
             return View();
-        }
-
-        private string GenerateJSONWebToken(User userInfo)
-        {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("mrcoconut-authentication"));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-
-
-            var claims = Array.Empty<Claim>();
-
-            claims = new[]
-            {
-                new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
-                new Claim(ClaimTypes.Role, userInfo.UserType.ToString()),
-                new Claim("role", userInfo.UserType.ToString()),
-                new Claim(JwtRegisteredClaimNames.Jti, userInfo.Id.ToString())
-            };
-
-            // We configure our token and lifetime
-            var token = new JwtSecurityToken
-                (
-                    "ergonomiks",
-                    "ergonomiks",
-                    claims,
-                    expires: DateTime.Now.AddHours(12),
-                    signingCredentials: credentials
-                );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

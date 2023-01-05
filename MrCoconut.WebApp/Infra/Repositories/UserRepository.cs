@@ -1,10 +1,13 @@
-﻿using Microsoft.CodeAnalysis.Options;
+﻿using Flunt.Notifications;
+using Microsoft.CodeAnalysis.Options;
 using Microsoft.Extensions.Options;
 using MongoDB.Bson;
 using MongoDB.Driver;
 using MrCoconut.WebApp.Infra.Repositories.Interfaces;
 using MrCoconut.WebApp.Models;
 using MrCoconut.WebApp.Utils;
+using MrCoconut.WebApp.ViewModels;
+using System.Diagnostics.Contracts;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace MrCoconut.WebApp.Infra.Repositories
@@ -17,22 +20,29 @@ namespace MrCoconut.WebApp.Infra.Repositories
         {
         }
 
-        public async Task<User> Login(string email, string password)
+        public async Task<UserViewModel> Login(string email, string password)
         {
             try
             {
+                var userViewModel = new UserViewModel();
+
                 var userRegistered = await GetByEmail(email);
                 if (userRegistered == null)
                 {
-                    throw new InvalidOperationException("Email invalid!");
+                    userViewModel.Erros.Add("Invalid email!");
                 }
 
                 if (!Password.PasswordVerification(password, userRegistered.Password))
                 {
-                    throw new InvalidOperationException("Password invalid!");
+                    userViewModel.Erros.Add("Invalid password!");
                 }
 
-                return userRegistered;
+                userViewModel.Name = userRegistered.Name;
+                userViewModel.Email = userRegistered.Email;
+                userViewModel.Password = userRegistered.Password;
+                userViewModel.UserType = userRegistered.UserType;
+
+                return userViewModel;
             }
             catch (Exception error)
             {

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleLogin.css">
+  <title>Login</title>
+</head>
+<body class="bodyLogin">
+  <div class="quadroLogin">
+    <h1 class="logo">Mr.Coconut</h1>
+    <form action="" method="post">
+      <div class="campoInput">
+        <legend>Email</legend>
+        <input type="email" name="email" minlength="10" placeholder="ex: abcdef@gmail.com" title="Digite seu email (ex: abcdef@gmail.com)" value=""
+          autocomplete="" required>
+      </div>
+      <div class="campoInput">
+        <legend>Senha</legend>
+        <input type="password" name="senha" minlength="8" placeholder="Utilize caracteres especiais (ex: @,,#)" pattern="(@,,# {1,2,3,4,5,6,7,8,9,0})"
+          title="Utilize caracteres especiais (ex: @,,#)" required>
+      </div>
+      <button class="botaoConfirmar" type="submit">Login</button>
+    </form>
+    <!-- <p>Esqueceu a senha? <a href="#">Clique aqui</a></p> -->
+    <br>
+    <p>Não tem cadastro? <a href="#">Crie aqui</a></p>
+  </div>
+</body>
+</html>

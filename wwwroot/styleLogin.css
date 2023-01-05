@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background-color: #f7bb75;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.navLinks {
+  width: 40%;
+}
+
+.navLinks ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+footer {
+  background-color: #f7bb75;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* body{
+  height: 100vh;
+  width: 100vw;
+} */
+
+.bodyLogin {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1e9bb;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+}
+
+.quadroLogin {
+  font-family: 'Montserrat';
+  font-size: medium;
+  width: 350px;
+  height: 399px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7bb75;
+  border-radius: 0.9rem;
+}
+
+.quadroLogin form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+}
+
+.quadroLogin form .input {
+  font-family: 'Montserrat';
+  background-color: #f1e9bb;
+  border: 0.5px solid;
+  width: 268px;
+  height: 38px;
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+
+.botaoConfirmar {
+  width: 268px;
+  height: 35px;
+  font-family: 'Montserrat';
+  font-size: medium;
+  background-color: #FB993F;
+  border: 1px solid;
+  margin-bottom: 0.5rem;
+}
+
+.quadroLogin p a {
+  font-weight: bold;
+  text-decoration: none;
+  color: orangered
+}
+
+/*Tela de Cadastro*/
+.bodyCadastro {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(images/backgroundCoconut.png);
+}
+
+.quadroCadastro {
+  width: 700px;
+  height: 600px;
+  display: flex;
+  border-radius: 0.9rem;
+  background-color: #f7bb75;
+  align-items: center;
+}
+
+.formCadastro {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formCadastro h1 {
+  font-family: 'Pacifico';
+  font-size: 2rem;
+}
+
+.formCadastro form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.campoInput input {
+  font-family: 'Montserrat';
+  background-color: #f1e9bb;
+  border: 0.5px solid;
+  width: 268px;
+  height: 38px;
+  padding: 0.2rem;
+  margin: 0.5rem;
+}
+
+.quadroCadastro hr {
+  height: 500px;
+  border: black 1px solid;
+}
+
+.textoBoasVindas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 50%;
+
+}
+
+.quadroTextos {
+  width: 180px;
+}
+
+.quadroTextos h1 {
+  font-family: 'Pacifico';
+}
+
+.quadroTextos p {
+  font-family: 'Montserrat';
+}
+
+/*Tela de Feed*/
+.bodyFeed {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1e9bb;
+}
+
+.publicacao {
+  width: 1000px;
+  height: 400px;
+  background-color: #f7bb75;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.headPublicacao {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.headPublicacao p {
+  margin: 10px;
+}
+
+.imagemPerfil {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.receita h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.blocoReceita {
+  display: flex;
+  justify-content: space-around;
+}
+
+.imagemReceita img {
+  width: 430px;
+  height: 270px;
+}
+
+.infoReceita {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.infoReceita ul {
+  list-style-type: none;
+}

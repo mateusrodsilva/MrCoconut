@@ -152,3 +152,64 @@ html {
     .quadroTextos p {
         font-family: 'Montserrat', sans-serif;
     }
+
+
+/*Tela de Feed*/
+.bodyFeed {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1e9bb;
+}
+
+.publicacao {
+    width: 1000px;
+    height: 400px;
+    background-color: #f7bb75;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.headPublicacao {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+    .headPublicacao p {
+        margin: 10px;
+    }
+
+.imagemPerfil {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.receita h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.blocoReceita {
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagemReceita img {
+    width: 430px;
+    height: 270px;
+}
+
+.infoReceita {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .infoReceita ul {
+        list-style-type: none;
+    }

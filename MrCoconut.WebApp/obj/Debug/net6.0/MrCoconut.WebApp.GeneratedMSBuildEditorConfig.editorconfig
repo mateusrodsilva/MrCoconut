@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\mrodr\OneDrive\Área de Trabalho\ProjetoMrCoconut\MrCoconut\MrCoconut.WebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/mrodr/OneDrive/Área de Trabalho/ProjetoMrCoconut/MrCoconut/MrCoconut.WebApp/Views/Feed/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mrodr/OneDrive/Área de Trabalho/ProjetoMrCoconut/MrCoconut/MrCoconut.WebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
