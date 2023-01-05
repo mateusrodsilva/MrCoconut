@@ -34,7 +34,7 @@ namespace MrCoconut.WebApp.Controllers
             else
             {
                 ViewData["Message"] = "Wrong data, try again...";
-                return LocalRedirect("~/Login");
+                return View("Index");
             }
 
             return LocalRedirect("~/Feed/Index");
